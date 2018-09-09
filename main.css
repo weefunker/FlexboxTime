@@ -48,10 +48,11 @@ html { font-size: 75%;}
     padding-top: 25px;
     align-self: flex-start;
     margin-right: 40px;
+    font-size: 150%;
 }
 .nav h4 strong {
     padding-top: 25px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 
@@ -149,4 +150,23 @@ button.orange:active {
 .right-pannel {
     padding-left: 0.5em; 
     padding-right: 5em;
+}
+
+hr {
+    color: #1a1818;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links{
+    text-decoration: underline;
+    color: #b3b3b3;
+}
+
+.footer-links:visited{
+    text-decoration: underline;
+    color: #b3b3b3;
 }
