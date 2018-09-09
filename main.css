@@ -2,13 +2,15 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    
+    min-height: 100vh;
 }
+
 body p {
     font-size: 1.2em;
     color: grey;
 }
-body h3{
+
+body h3 {
     font-size: 1.7em;
     color: #242323;
 }
@@ -17,14 +19,42 @@ body h1 {
     font-size: 2em;
     color: #242323;
 }
+
 body h2 {
     font-size: 1.9em;
     color: #242323;
 }
 
-html { font-size: 75%;}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+html {
+    font-size: 75%;
+}
+
 @media only screen and (max-device-width: 480px) {
-	html { font-size: 100%; }
+    html {
+        font-size: 100%;
+    }
+}
+
+main {
+    flex-grow: 1;
+}
+
+
+header, main, footer {
+    flex-shrink: 0;
+}
+
+.main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .header {
@@ -34,15 +64,18 @@ html { font-size: 75%;}
 }
 
 .logo {
-    align-self: flex-start;
+   margin: 2em;
+   margin-bottom: -6em;
+   padding-left:4em; 
+   justify-self: baseline;
 }
 
 .nav {
     align-self: flex-end;
     justify-content: space-evenly;
-    margin-right:25px;
+    justify-self: baseline;
+    margin-right: 25px;
 }
-
 
 .nav h4 {
     padding-top: 25px;
@@ -50,11 +83,11 @@ html { font-size: 75%;}
     margin-right: 40px;
     font-size: 150%;
 }
+
 .nav h4 strong {
     padding-top: 25px;
     font-weight: 800;
 }
-
 
 .nav ul li a {
     text-decoration: none;
@@ -76,21 +109,23 @@ html { font-size: 75%;}
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    border-top: 1px solid #1a1818;
     flex: 1;
 }
 
 .cta h1 {
-    font-size: 2em;
+    padding: 0;
+    padding-top: 2%;
+    font-size: 2.5em;
     flex-grow: 1;
     flex: 1;
     justify-content: center;
+    color: #ECECEC;
 }
 
 .cta button {
     min-height: 30px;
     min-width: 10%;
-    background-color:#f90;
+    background-color: #f90;
     border: 2px solid rgb(27, 27, 27);
     color: antiquewhite;
     display: inline-block;
@@ -98,11 +133,10 @@ html { font-size: 75%;}
     display: inline-block;
     margin: 2%;
     transition: all .3s ease-in-out;
-
 }
 
-.cta button a  {
-    font-size: 20px;
+.cta button a {
+    font-size: 2em;
 }
 
 button.orange {
@@ -119,54 +153,56 @@ button.orange:hover {
 }
 
 button.orange:active {
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .text-pannels {
     display: flex;
     padding: 3em;
     border: solid .5em transparent;
-   box-sizing: border-box;
-   /** relative so that our ::before absolute block can position itself according to it's parent block **/
-   position: relative;
+    box-sizing: border-box;
+    /** relative so that our ::before absolute block can position itself according to it's parent block **/
+    position: relative;
 }
 
-.text-pannels h3, p {
+.text-pannels h3,
+p {
     line-height: 1.8em;
 }
+
 .text-pannels p {
     padding-bottom: 1em;
 }
 
-.text-pannels > div {
+.text-pannels>div {
     flex: 1;
 }
 
 .left-pannel {
-    padding-right: 0.5em; 
+    padding-right: 0.5em;
     padding-left: 5em;
 }
 
 .right-pannel {
-    padding-left: 0.5em; 
+    padding-left: 0.5em;
     padding-right: 5em;
 }
 
-hr {
-    color: #1a1818;
+horzline {
+    color: grey;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
 }
 
-.footer-links{
+.footer-links a {
     text-decoration: underline;
     color: #b3b3b3;
 }
 
-.footer-links:visited{
+.footer-links a:visited {
     text-decoration: underline;
     color: #b3b3b3;
 }
