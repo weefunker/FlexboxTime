@@ -2,19 +2,24 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    
 }
 body p {
     font-size: 1.2em;
+    color: grey;
 }
 body h3{
     font-size: 1.7em;
+    color: #242323;
 }
 
 body h1 {
     font-size: 2em;
+    color: #242323;
 }
 body h2 {
     font-size: 1.9em;
+    color: #242323;
 }
 
 html { font-size: 75%;}
@@ -38,6 +43,7 @@ html { font-size: 75%;}
     margin-right:25px;
 }
 
+
 .nav h4 {
     padding-top: 25px;
     align-self: flex-start;
@@ -52,9 +58,12 @@ html { font-size: 75%;}
 .nav ul li a {
     text-decoration: none;
     color: #1a1818;
-    padding: 5px;
+    padding: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
     flex-wrap: nowrap;
     border-right: 1px solid #ECECEC;
+    font-size: 120%;
 }
 
 .cta {
@@ -114,13 +123,30 @@ button.orange:active {
 
 .text-pannels {
     display: flex;
-    padding: 25px;
+    padding: 3em;
+    border: solid .5em transparent;
+   box-sizing: border-box;
+   /** relative so that our ::before absolute block can position itself according to it's parent block **/
+   position: relative;
 }
 
 .text-pannels h3, p {
     line-height: 1.8em;
 }
+.text-pannels p {
+    padding-bottom: 1em;
+}
 
 .text-pannels > div {
     flex: 1;
+}
+
+.left-pannel {
+    padding-right: 0.5em; 
+    padding-left: 5em;
+}
+
+.right-pannel {
+    padding-left: 0.5em; 
+    padding-right: 5em;
 }
